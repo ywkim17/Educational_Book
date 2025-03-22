@@ -28,8 +28,8 @@ def ghk(R, T, F, P_K, K_in, K_out, P_Na, Na_in, Na_out, P_Cl, Cl_in, Cl_out, P_C
     # Calculate RT/F in millivolts
     V_T = (R * T) / F * 1000  # Convert to mV
     
-    numerator = (P_K * K_out + P_Na * Na_out + P_Cl * Cl_in + P_Ca * Ca_out)
-    denominator = (P_K * K_in + P_Na * Na_in + P_Cl * Cl_out + P_Ca * Ca_in)
+    numerator = (P_K * K_out + P_Na * Na_out + P_Cl * Cl_in + P_Ca * Math.sqrt(Ca_out))
+    denominator = (P_K * K_in + P_Na * Na_in + P_Cl * Cl_out + P_Ca * Math.sqrt(Ca_in))
     
     if denominator == 0:
         raise ValueError("Denominator is zero; check input values.")
