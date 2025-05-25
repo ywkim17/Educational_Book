@@ -28,7 +28,7 @@ def nernst_equation(R, T, F, z, ion_in, ion_out):
 # User Inputs
 R = 8.314
 T = 310
-F = 6485
+F = 96485
 
 # Example Ion Data
 z = 1
