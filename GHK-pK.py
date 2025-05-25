@@ -31,8 +31,8 @@ def ghk(R, T, F, P_K1, P_K2, P_K3, K_in, K_out, P_Na, Na_in, Na_out, P_Cl, Cl_in
     # Calculate RT/F in millivolts
     V_T = (R * T) / F * 1000  # Convert to mV
     
-    # Effective Potassium Permeability (weighted average or sum)
-    P_K_eff = (P_K1 + P_K2 + P_K3) / 3
+    # Effective Potassium Permeability
+    P_K_eff = (P_K1 + P_K2 + P_K3)
     
     numerator = (P_K_eff * K_out + P_Na * Na_out + P_Cl * Cl_in + P_Ca * Math.sqrt(Ca_out))
     denominator = (P_K_eff * K_in + P_Na * Na_in + P_Cl * Cl_out + P_Ca * Math.sqrt(Ca_in))
